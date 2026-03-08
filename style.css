@@ -1,70 +1,145 @@
-body{
-font-family: Arial;
+*{
 margin:0;
-background:#111;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial;
+background:linear-gradient(120deg,#0a0a0a,#1a0000);
 color:white;
 }
+
+/* HEADER */
 
 header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px;
+padding:20px 50px;
 background:black;
 position:sticky;
 top:0;
+z-index:100;
+}
+
+header h1{
+color:#ff2a2a;
 }
 
 nav a{
-margin:0 10px;
+margin-left:20px;
 text-decoration:none;
 color:white;
-font-size:14px;
+transition:0.3s;
 }
+
+nav a:hover{
+color:#ff2a2a;
+transform:scale(1.1);
+}
+
+/* HERO */
 
 .hero{
+height:70vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
-padding:120px 20px;
-background:#1b1b1b;
+background:linear-gradient(160deg,#000,#330000);
+animation:fadeIn 2s;
 }
 
+.hero h2{
+font-size:45px;
+color:#ff3b3b;
+}
+
+.hero p{
+margin-top:10px;
+font-size:20px;
+}
+
+/* SECTIONS */
+
 section{
-padding:60px 20px;
-max-width:1000px;
-margin:auto;
+padding:80px 15%;
+animation:slideUp 1s ease;
 }
 
 h2{
-border-left:4px solid #00c3ff;
-padding-left:10px;
+margin-bottom:30px;
+color:#ff2a2a;
 }
+
+/* CARDS */
 
 .card{
-background:#1e1e1e;
-padding:20px;
+background:#111;
+padding:25px;
 margin:20px 0;
 border-radius:10px;
+transition:0.3s;
+border:1px solid #330000;
 }
 
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 0 20px #ff2a2a;
+}
+
+/* SKILLS */
+
 .skill{
-margin:20px 0;
+margin:25px 0;
 }
 
 .bar{
-background:#333;
 height:10px;
+background:#222;
 border-radius:20px;
+overflow:hidden;
 }
 
 .bar span{
 display:block;
 height:10px;
-background:#00c3ff;
-border-radius:20px;
+background:linear-gradient(90deg,#ff0000,#ff5a5a);
+animation:load 2s;
 }
+
+/* FOOTER */
 
 footer{
 text-align:center;
 padding:20px;
 background:black;
+margin-top:40px;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+@keyframes slideUp{
+from{
+transform:translateY(40px);
+opacity:0;
+}
+to{
+transform:translateY(0);
+opacity:1;
+}
+}
+
+@keyframes load{
+from{
+width:0;
+}
 }
