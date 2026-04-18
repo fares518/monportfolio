@@ -143,3 +143,25 @@ from{
 width:0;
 }
 }
+/* BOUTON COMPETENCES */
+
+.btn-competence {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #ff2a2a; /* Ton rouge habituel */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+
+.btn-competence:hover {
+    background: transparent;
+    border-color: #ff2a2a;
+    color: #ff2a2a;
+    box-shadow: 0 0 15px #ff2a2a;
+    transform: scale(1.05);
+}
