@@ -165,3 +165,38 @@ width:0;
     box-shadow: 0 0 15px #ff2a2a;
     transform: scale(1.05);
 }
+#contact a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#contact a:hover {
+    color: #ff2a2a; /* Devient rouge au survol */
+}
+
+/* Style de l'aperçu du CV (l'iframe) */
+#contact iframe {
+    border: 2px solid #330000 !important; /* Bordure sombre comme tes cards */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 42, 42, 0.2); /* Petite lueur rouge */
+    background: #111;
+}
+
+/* Titre "Aperçu de mon CV" */
+#contact h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* Adaptation pour les petits écrans (téléphones) */
+@media (max-width: 768px) {
+    #contact iframe {
+        height: 350px; /* On réduit un peu la hauteur sur mobile */
+    }
+    
+    #contact h3 {
+        margin-top: 20px; /* Espace entre les infos et l'aperçu */
+    }
+}
